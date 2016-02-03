@@ -1,0 +1,25 @@
+machine:
+  services:
+    - docker
+
+  node:
+    version:
+      0.12.7
+
+  environment:
+    NODE_ENV: test
+
+dependencies:
+  post:
+
+test:
+  pre:
+    - docker info
+    - docker build -t testcraft/executor-base:latest .
+
+deployment:
+  hub:
+    branch: master
+    commands:
+      - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
+      - docker push testcraft/executor-base:latest
