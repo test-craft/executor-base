@@ -12,6 +12,7 @@ RUN apt-get update && apt-get install -y \
     x11vnc \
     xvfb \
     firefox \
+    chromium-browser \
     make \
     g++ \
     python-pip \
