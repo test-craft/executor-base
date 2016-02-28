@@ -23,7 +23,7 @@ RUN sudo apt-get install -y --no-install-recommends default-jdk
 #FFMPEG
 RUN sudo add-apt-repository ppa:kirillshkrogalev/ffmpeg-next -y
 RUN sudo apt-get update
-RUN sudo apt-get install -y ffmpeg
+RUN sudo apt-get install -y ffmpeg=7:2.4.3-1ubuntu1~trusty6
 
 # FIX for protractor
 RUN rm -rf /root/.node-gyp
