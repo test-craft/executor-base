@@ -21,8 +21,9 @@ RUN apt-get update && apt-get install -y \
 RUN sudo apt-get install -y --no-install-recommends default-jdk
 
 #FFMPEG
-RUN sudo add-apt-repository ppa:kirillshkrogalev/ffmpeg-next -y
-RUN sudo apt-get install -y ffmpeg=2.3.6
+#RUN sudo add-apt-repository ppa:kirillshkrogalev/ffmpeg-next -y
+#RUN sudo apt-get update
+RUN sudo apt-get install -y ffmpeg
 
 # FIX for protractor
 RUN rm -rf /root/.node-gyp
