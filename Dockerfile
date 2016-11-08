@@ -31,7 +31,7 @@ RUN sudo apt-get install -y ffmpeg=7:2.4.3-1ubuntu1~trusty6
 RUN rm -rf /root/.node-gyp
 
 # Protractor
-RUN npm install --unsafe-perm -g protractor
+RUN npm install --unsafe-perm -g protractor@4.0.10
 
 # Webdriver
 RUN webdriver-manager update
