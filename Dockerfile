@@ -1,6 +1,8 @@
 FROM testcraft/base:1.0
 MAINTAINER Levin Daniel
 
+RUN sudo apt-get update
+
 # Added to allow installation of FFMPEG
 RUN sudo apt-get install -y software-properties-common
 RUN sudo apt-get install -y software-properties-common python-software-properties
