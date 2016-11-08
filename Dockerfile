@@ -11,10 +11,10 @@ RUN sudo add-apt-repository -y ppa:mc3man/trusty-media
 RUN sudo apt-get update
 
 RUN apt-get update && apt-get install -y \
-    x11vnc=0.9.13 \
-    xvfb \
-    firefox=44.0.2 \
-    chromium-browser=48.0.2564.116 \
+    x11vnc=0.9.13-1.1 \
+    xvfb=2:1.15.1-0ubuntu2.7\
+    firefox=44.0.2+build1-0ubuntu0.14.04.1 \
+    chromium-browser=48.0.2564.116-0ubuntu0.14.04.1.1111 \
     make \
     g++ \
     python-pip \
