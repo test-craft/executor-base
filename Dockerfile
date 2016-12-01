@@ -5,7 +5,7 @@ RUN sudo apt-get update
 
 # Added to allow installation of FFMPEG
 RUN sudo apt-get install -y software-properties-common
-RUN sudo apt-get install -y software-properties-common python-software-properties
+RUN sudo apt-get install -y python-software-properties
 RUN sudo add-apt-repository -y ppa:mc3man/trusty-media
 
 RUN sudo apt-get update
@@ -31,7 +31,7 @@ RUN sudo apt-get install -y ffmpeg=7:2.4.3-1ubuntu1~trusty6
 RUN rm -rf /root/.node-gyp
 
 # Protractor
-RUN npm install --unsafe-perm -g protractor@4.0.10
+RUN npm install --unsafe-perm -g protractor@4.0.11
 
 # Webdriver
 RUN webdriver-manager update

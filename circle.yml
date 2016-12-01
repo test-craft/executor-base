@@ -16,7 +16,7 @@ test:
   pre:
     - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
     - docker info
-    - docker build -t testcraft/executor-base:latest .
+    - docker build --no-cache -t testcraft/executor-base:latest .
 
 deployment:
   hub:
